@@ -2,17 +2,15 @@ fun main() {
     try {
 
         val dog = inputDog()
-            //информация о собаке
-        println("\nИнформация о собаке:")
-        println(dog.DogInfo())
 
 
         when {
             dog.heightAtWithers <= 0 -> {
-                println("Рост не должен быть меньше или равен 0")
+                println("Недопустимый формат")
                 return
             }
-            dog.weight <= 0 ->{ println("Вес не должен быть меньше или равен 0")
+            dog.weight <= 0 ->
+                { println("Недопустимый формат")
                 return
             }
             else -> {
@@ -24,6 +22,11 @@ fun main() {
                 dog.WeightAndFeed()
             }
         }
+
+        println("\nИнформация о собаке:")
+        println(dog.DogInfo())
+
+
 
     } catch (e: Exception) {
         println("Неверный формат")

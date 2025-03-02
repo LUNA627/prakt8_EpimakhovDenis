@@ -24,10 +24,14 @@ class Dog(val nickname: String, val breed: String, val heightAtWithers: Int, val
             in 21..35 -> println("Необходимо количество корма (гр): 310-460")
             in 36..50 -> println("Необходимо количество корма (гр): 470-600")
             in 51..70 -> println("Необходимо количество корма (гр): 610-760")
-            else -> println("Слишком большой вес")
+            else -> {
+                println("Слишком большой вес")
+                return
+            }
         }
     }
 
+    //информация о собаке
     fun DogInfo(): String {
         return """
             Кличка: $nickname
@@ -39,3 +43,5 @@ class Dog(val nickname: String, val breed: String, val heightAtWithers: Int, val
         """.trimIndent()
     }
 }
+
+
